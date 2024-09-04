@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess My Number</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1 class="game-title">Guess My Number</h1>
+      <p class="game-range">Between 1 and 100</p>
+      <div class="number-display">?</div>
+      <div class="game-controls">
+        <input
+          type="number"
+          class="guess-input"
+          ;
+          placeholder="Enter your guess"
+        />
+        <button class="check-btn">Check</button>
+        <button class="try-again-btn">Try Again</button>
+      </div>
+      <div class="game-info">
+        <p class="message">Start guessing...</p>
+        <p class="score">Attempts left: <span class="attempts">10</span></p>
+        <p class="highscore">
+          Highscore: <span class="highscore-value">0</span>
+        </p>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

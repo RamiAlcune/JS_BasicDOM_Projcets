@@ -1,0 +1,136 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --background-color: #ecf0f1;
+  --text-color: #34495e;
+  --error-color: #e74c3c;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.game-container {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.game-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.game-range {
+  color: var(--text-color);
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.number-display {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: var(--primary-color);
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.game-controls {
+  margin-bottom: 30px;
+}
+
+.guess-input {
+  padding: 12px 5px;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.guess-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.check-btn,
+.try-again-btn {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  margin: 0 5px;
+}
+
+.check-btn:hover,
+.try-again-btn:hover {
+  background-color: #27ae60;
+}
+
+.check-btn:active,
+.try-again-btn:active {
+  transform: scale(0.98);
+}
+
+.try-again-btn {
+  background-color: var(--error-color);
+}
+
+.try-again-btn:hover {
+  background-color: #c0392b;
+}
+
+.game-info {
+  text-align: left;
+}
+
+.message {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.score,
+.highscore {
+  font-size: 1rem;
+  margin: 8px 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.number-display.winner {
+  animation: pulse 0.5s infinite;
+  background-color: var(--secondary-color);
+}
